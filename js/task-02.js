@@ -1,8 +1,18 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
+
+const ingredientsListEl = document.querySelector("#ingredients");
+console.log(ingredientsListEl);
+const ingredientsPackageEl = ingredients.forEach((ingredient) => {
+  const ingredientsItemEl = document.createElement("li");
+  ingredientsItemEl.textContent = ingredient;
+  ingredientsItemEl.classList.add("item");
+
+  ingredientsListEl.prepend(ingredientsItemEl);
+});
