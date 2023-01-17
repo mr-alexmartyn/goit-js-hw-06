@@ -8,7 +8,6 @@ const ingredients = [
 ];
 
 const ingredientsListEl = document.querySelector("#ingredients");
-console.log(ingredientsListEl);
 const ingredientsPackageEl = ingredients.forEach((ingredient) => {
   const ingredientsItemEl = document.createElement("li");
   ingredientsItemEl.textContent = ingredient;

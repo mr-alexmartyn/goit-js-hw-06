@@ -3,14 +3,14 @@ logForm.addEventListener("submit", onLogSubmit);
 
 function onLogSubmit(event) {
   event.preventDefault();
-  const {
-    elements: { email, password },
-  } = event.currentTarget;
+  const logFormElements = event.currentTarget.elements;
+  const mail = logFormElements.email.value;
+  const password = logFormElements.password.value;
 
-  if (email.value === "" || password.value === "") {
-    return alert("Поле не может оставаться пустым");
-  }
-  console.log(`Email:  ${email.value}`);
-  console.log(`Password: ${password.value}`);
+  const elementsData = {
+    mail,
+    password,
+  };
   event.currentTarget.reset();
+  console.log(elementsData);
 }

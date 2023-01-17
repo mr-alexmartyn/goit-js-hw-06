@@ -1,13 +1,14 @@
 const inputValidation = document.getElementById("validation-input");
-console.log(inputValidation);
 
 inputValidation.addEventListener("blur", () => {
   const inputValue = inputValidation.value.length;
   const elChecked = inputValidation.getAttribute("data-length");
 
-  if (inputValue <= elChecked) {
-    inputValidation.classList.add("invalid");
+  if (inputValue == elChecked) {
+    inputValidation.classList.add("valid");
+    inputValidation.classList.remove("invalid");
   } else {
-    inputValidation.classList.replace("invalid", "valid");
+    inputValidation.classList.add("invalid");
+    inputValidation.classList.remove("valid");
   }
 });

@@ -14,7 +14,6 @@ const images = [
 ];
 
 const galleryList = document.querySelector(".gallery");
-console.log(galleryList);
 images.forEach((image) =>
   galleryList.insertAdjacentHTML(
     "afterbegin",

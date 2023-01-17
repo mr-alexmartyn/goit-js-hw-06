@@ -1,5 +1,4 @@
 const inputBox = document.querySelector("#font-size-control");
-console.log(inputBox.value);
 const spanText = document.querySelector("#text");
 
 inputBox.addEventListener("input", onInputRange);
